@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app1">
+        <a v-bind:href="link">링크1</a>
+    </div>
+
+    <div id="app2">
+        <a :href="link">링크2</a>
+    </div>
+
+    <div id="app3">
+        <!-- <button v-on:click="move">링크3</button> -->
+        <a v-on:click="move">링크3</a>
+    </div>
+
+    <div id="app4">
+        <!-- <button @click="move">링크4</button> -->
+        <a @click="move()">링크4</a>
+    </div>
+
+    <script src="v-bind, v-on.js"></script>
+
+</body>
+
+</html>

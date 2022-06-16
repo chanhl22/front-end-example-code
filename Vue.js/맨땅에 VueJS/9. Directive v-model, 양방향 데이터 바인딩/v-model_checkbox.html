@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="checkbox" v-model="name">
+        {{ name }}
+        <div>
+            <input type="checkbox" v-model="checkedValues" value="1">
+            <input type="checkbox" v-model="checkedValues" value="2">
+            <input type="checkbox" v-model="checkedValues" value="3">
+            <input type="checkbox" v-model="checkedValues" value="4">
+            {{checkedValues}}
+        </div>
+    </div>
+
+    <script src="v-model_checkbox.js"></script>
+
+</body>
+
+</html>

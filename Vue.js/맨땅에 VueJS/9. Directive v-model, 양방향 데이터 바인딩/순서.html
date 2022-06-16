@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" checked>
+    <div id="app">
+        <div v-for="(x, i) in cafeList">
+            <input type="checkbox" v-model="x.checked" :checked="x.checked" @click="onClickCafeCheck(x)">{{ x.checked }}
+        </div>
+    </div>
+
+    <script src="순서.js"></script>
+
+</body>
+
+</html>

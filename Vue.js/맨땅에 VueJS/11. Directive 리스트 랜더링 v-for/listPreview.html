@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>여행지 리스트</h1>
+        <ul>
+            <li class="listPreview" v-for="(city, index) in travelList" :key="index" v-if="city.name != '대만'">
+                {{ city.name }} - {{ city.distance }}
+                <span class="deletePreview" @click="deletePreviewBnt" :index="index">x</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="listPreview.js"></script>
+
+</body>
+
+</html>

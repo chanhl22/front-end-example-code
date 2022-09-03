@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js"></script>
+</head>
+
+<body>
+
+    <script>
+
+        var arr = [1, 2, 3];
+        var otherArr = [4, 5, 6];
+
+        _.each(arr, function(data){
+             console.log(this[data]);
+        }, otherArr);
+
+    </script>
+
+    <!-- <script>
+        _.each({ one: 1, two: 2, three: 3 }, alert);
+    </script> -->
+
+
+</body>
+
+</html>

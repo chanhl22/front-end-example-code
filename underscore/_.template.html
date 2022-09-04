@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>underscore</title>
+
+    <!-- 스크립트 라이브러리 선언 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js"></script>
+
+</head>
+
+<body>
+
+    <h1>hi</h1>
+
+    <!-- 템플릿 문자열 작성 -->
+    <script type="text/template">
+        <h1> 
+            <%= title %>
+        </h1> 
+        <% items.forEach(function (item, index) { %>
+            <p><%= item %></p> 
+        <% }); %>
+    </script>
+
+    <!-- 템플릿 문자열 작성 -->
+    <script>
+        //jQuery로 템플릿 문자열 셀렉트 
+        var templateText = $('script[type="text/template"]').text();
+
+
+        //템플릿 문자열로 템플릿 함수 생성 
+        var createTemplate = _.template(templateText);
+
+
+        //데이터를 JSON 객체로 넘겨주고 템플릿 컴파일 
+        var result = createTemplate({
+            title: "underscore",
+            items: ["aaaa", "bbb", "cccc"]
+        });
+
+
+        //컴파일된 결과를 jQuery로 body에 삽입 
+        $('body').html(result);
+
+    </script>
+
+</body>
+
+</html>

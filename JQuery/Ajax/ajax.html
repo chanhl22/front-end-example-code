@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Ajax Method</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#requestBtn").on("click", function () {
+                $.ajax({
+                    url: "http://localhost:8080/test/test.do",
+                    contentType: "application/json",
+                    type: "post",
+                    data: JSON.stringify({
+                        username: "kim",
+                        age: "20"
+                    }),
+                    success: function (data) {
+                        alert("데이터 전송이 성공적으로 끝났을 때 실행");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>$.ajax() 메소드</h1>
+    <button id="requestBtn">$.ajax() 메소드 실행</button>
+    <p id="text"></p>
+
+</body>
+
+</html>

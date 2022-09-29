@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery .text() </title>
+    <script>
+        $(function () {
+            $("#now").text(new Date());
+            setInterval(function() {
+                $("#now").text(new Date());
+            }, 1000);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>현재 시간</h1>
+    <div id="now"></div>
+</body>
+
+</html>

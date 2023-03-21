@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <p>이 문장 위로 마우스를 움직여 보세요.</p>
+    <div></div>
+
+    <script>
+        $("p").on("mouseenter mouseleave", function () {
+            $("div").append("마우스 커서가 문장 위로 들어오거나 빠져 나갔습니다.<br>");
+        });
+    </script>
+
+</body>
+
+</html>

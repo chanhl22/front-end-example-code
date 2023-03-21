@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <input type="text"> 입력란에 키보드로 내용을 입력하세요.
+    <p id="text"></p>
+
+    <script>
+        var i = 0;
+        $("input").keypress(function () {
+            $("#text").text((++i) + "번 키보드가 눌렸습니다.");
+        });
+    </script>
+
+</body>
+
+</html>

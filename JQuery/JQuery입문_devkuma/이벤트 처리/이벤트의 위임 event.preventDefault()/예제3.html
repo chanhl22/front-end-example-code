@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <ul id="linkList">
+        <li><a href="//www.devkuma.com">첫번째 링크</a></li>
+        <li><a href="//www.devkuma.com">두번째 링크</a></li>
+    </ul>
+    <p>event.preventDefault() 메소드는 위의 URL 링크가 동작하지 않게 한다.</p>
+    <button>신규 링크 추가</button>
+
+    <script>
+        $("#linkList").on("click", "a", function (event) {
+            event.preventDefault();
+            alert("이 링크는 동작하지 않습니다!");
+        });
+
+        $("button").one("click", function () {
+            $("#linkList").append('<li><a href="//www.devkuma.com">신규 링크</a></li>');
+        });
+    </script>
+
+</body>
+
+</html>

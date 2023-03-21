@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+
+  <button id="btn">버튼 클릭 가능</button>
+  <button id="btnBind">버튼 클릭을 가능하게 합니다.</button>
+  <button id="btnUnbind">버튼 클릭을 불가능하게 합니다.</button>
+
+  <script>
+    $("#btn").on("click", function () {
+      alert("버튼을 클릭했습니다.");
+    });
+    $("#btnBind").on("click", function () {
+      $("#btn").off("click");
+      $("#btn").on("click", function () {
+        alert("버튼을 클릭했습니다.");
+      }).text("버튼 클릭 가능");
+    });
+    $("#btnUnbind").on("click", function () {
+      $("#btn").off("click").text("버튼 클릭 불가능");
+    });
+  </script>
+
+</body>
+
+</html>

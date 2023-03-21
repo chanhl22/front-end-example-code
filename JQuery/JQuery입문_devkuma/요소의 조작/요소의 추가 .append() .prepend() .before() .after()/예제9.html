@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery .wrapInner() </title>
+    <style>
+        p {
+            margin: 10px;
+            border: 1px solid blue;
+        }
+
+        .wrap {
+            margin: 10px;
+            border: 1px solid green;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("button").on("click", function () {
+                $("p").wrapInner("<div class='wrap'></div>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>안녕하세요.</p>
+    <div>안녕하세요.</div>
+    <p>안녕하세요.</p>
+    <button>문장 감싸기</button>
+</body>
+
+</html>

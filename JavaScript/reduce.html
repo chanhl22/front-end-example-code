@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script>
+        const numbers = [1, 2, 3, 4];
+
+        const sum = numbers.reduce((acc, el, i) => {
+            console.log(`${i}번째 콜백함수`)
+            console.log(`acc: ${acc}`);
+            console.log(`el: ${el}`);
+
+            return el + acc;
+        }, 0);
+
+        console.log(`-----------`);
+        console.log(`sum: ${sum}`);
+    </script>
+
+</body>
+
+</html>

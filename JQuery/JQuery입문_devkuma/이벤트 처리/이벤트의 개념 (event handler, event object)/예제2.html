@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <a id="text1" href="javascript:alert(1);">메소드 호출 없음</a>
+    </div>
+    <div>
+        <a id="text2" href="javascript:alert(1);">preventDefault 메소드 호출</a>
+    </div>
+    <div>
+        <a id="text3" href="javascript:alert(1);">stopPropagation 메소드 호출</a>
+    </div>
+    <div>
+        <a id="text4" href="javascript:alert(1);">둘다 호출</a>
+    </div>
+
+    <script>
+        // 메소드 호출 없음
+        $("#text1").on("click", function (e) {
+            $(this).css('color', 'red');
+        });
+
+        // preventDefault 메소드 호출
+        $("#text2").on("click", function (e) {
+            $(this).css('color', 'red');
+
+            e.preventDefault();
+        });
+
+        // stopPropagation 메소드 호출
+        $("#text3").on("click", function (e) {
+            $(this).css('color', 'red');
+
+            e.stopPropagation();
+        });
+
+        // 둘다 호출
+        $("#text4").on("click", function (e) {
+            $(this).css('color', 'red');
+
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        $("div").on("click", function (e) {
+            $(this).css('background-color', 'yellow');
+        });
+    </script>
+
+</body>
+
+</html>

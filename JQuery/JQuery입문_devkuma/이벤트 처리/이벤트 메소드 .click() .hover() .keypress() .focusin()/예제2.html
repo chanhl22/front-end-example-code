@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    마우스를 <button>버튼</button> 위로 올려보세요.
+    <p id="text"></p>
+
+    <script>
+        $("button").hover(function () {
+            $("#text").text("마우스가 올라왔습니다.");
+        }, function () {
+            $("#text").text("마우스가 빠져나갔습니다.");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <button>버튼</button>을 클릭 혹은 더블 클릭하세요.
+    <p id="text"></p>
+
+    <script>
+        $("button").click(function () {
+            $("#text").text("클릭이 되었습니다.");
+        });
+        $("button").dblclick(function () {
+            $("#text").text("더블 클릭이 되었습니다.");
+        });
+    </script>
+
+</body>
+
+</html>

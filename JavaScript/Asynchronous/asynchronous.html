@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js"></script>
+</head>
+
+<body>
+
+    <script>
+
+        function hello() {
+            console.log('hello');
+            niceTo();
+        }
+        function niceTo() {
+            setTimeout(() => { console.log('niceTo') }, 0)
+            meetYou();
+        }
+        function meetYou() {
+            console.log('meetYou')
+        }
+        hello();
+
+    </script>
+
+
+</body>
+
+</html>

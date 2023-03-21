@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <p>hello world</p>
+
+    <script>
+        $("p").on({
+            mouseenter: function () {
+                $(this).css("background-color", "yellow");
+            },
+            mouseleave: function () {
+                $(this).css("background-color", "blue");
+            },
+            click: function () {
+                $(this).css("background-color", "red");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
